@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.container {
+    margin: 20px auto;
+    width: 1000px;
+}
+.row {
+    display: flex;
+}
+hr {
+    border: 1px solid #eee;
+}
+.game-info {
+    display: flex;
+}
+.game-name {
+    flex: 1;
+}
+.category {
+    flex: 1;
+    text-align: right;
+    margin: 0 100px 0px 0;
+}
+.category span {
+    color: #e91e63;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.hangman-draw {
+    background-color: #f1e6ea;
+    flex: 1;
+    height: 324px;
+    padding: 20px;
+}
+.the-draw {
+    height: 280px;
+    width: 60px;
+    border-bottom: 4px solid #222;
+    position: relative;
+    margin: auto;
+    left: -60px;
+}
+.the-stand {
+    height: 100%;
+    background-color: #222;
+    width: 4px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+}
+.the-hang {
+    position: relative;
+}
+.the-hang::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #222;
+    top: 25px;
+    left: 30px;
+}
+.the-hang::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 50px;
+    background-color: #222;
+    top: 25px;
+    left: 127px;
+}
+.the-rope {
+    position: absolute;
+    left: 95px;
+    top: 75px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px dashed #222;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.the-man .head {
+    position: absolute;
+    left: 105px;
+    top: 84px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #222;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.the-man .body {
+    background-color: #222;
+    width: 4px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 133px;
+    margin-left: 95px;
+}
+.the-man .hands {
+    position: relative;
+}
+.the-man .hands::before {
+    left: 102px;
+    top: 150px;
+    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+}
+.the-man .hands::after {
+    left: 149px;
+    top: 150px;
+    transform: rotate(130deg);
+    -webkit-transform: rotate(-130deg);
+    -moz-transform: rotate(130deg);
+    -ms-transform: rotate(130deg);
+    -o-transform: rotate(130deg);
+}
+.the-man .hands::before,
+.the-man .hands::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background-color: #222;
+}
+.the-man .legs::before {
+    left: 102px;
+    transform: rotate(-130deg);
+    -webkit-transform: rotate(-130deg);
+    -moz-transform: rotate(-130deg);
+    -ms-transform: rotate(-130deg);
+    -o-transform: rotate(-130deg);
+}
+.the-man .legs::after {
+    left: 149px;
+    top: 150px;
+    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+    -moz-transform: rotate(130deg);
+    -ms-transform: rotate(130deg);
+    -o-transform: rotate(130deg);
+}
+.the-man .legs::before,
+.the-man .legs::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background-color: #222;
+    top: 220px;
+}
+.letters {
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    padding: 15px;
+}
+.letters span {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: #e91e63;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.letters-guess {
+    margin: 10px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 104px;
+}
+.letters-guess span {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fdfdfd;
+    border-bottom: 3px solid #222;
+    transition: 0.3s;
+}
+.letters-guess span.with-space {
+    border-bottom: none;
+    background-color: none;
+    position: relative;
+}
+.letters-guess span.with-space::before {
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: #ff0707;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
